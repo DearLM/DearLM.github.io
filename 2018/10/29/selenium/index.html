@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="lm&#39;s space">
 <meta property="og:description" content="1.安装：pip install Selenium2.验证：from selenium import webdriver3.用法：获取浏览器驱动对象：chrome：    1.下载驱动    2.驱动放到chrome根目录，驱动放到项目根目录代码：123456789101112#chorme浏览器from selenium import webdriverdirver = webdriver.Ch">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-29T10:08:45.301Z">
+<meta property="og:updated_time" content="2018-10-29T10:15:10.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium">
 <meta name="twitter:description" content="1.安装：pip install Selenium2.验证：from selenium import webdriver3.用法：获取浏览器驱动对象：chrome：    1.下载驱动    2.驱动放到chrome根目录，驱动放到项目根目录代码：123456789101112#chorme浏览器from selenium import webdriverdirver = webdriver.Ch">
@@ -302,7 +302,7 @@
 
       
         <p>1.安装：<code>pip install Selenium</code><br>2.验证：<code>from selenium import webdriver</code><br>3.用法：<br>获取浏览器驱动对象：<br>chrome：<br>    1.下载驱动<br>    2.驱动放到chrome根目录，驱动放到项目根目录<br>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#chorme浏览器</span><br><span class="line">from selenium import webdriver</span><br><span class="line">dirver = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line">#查询单个元素 返回webElement对象</span><br><span class="line">driver.find_element(By.XPATH,&quot;//li[@class=&apos;gl-item&apos;]&quot;)</span><br><span class="line"></span><br><span class="line">#查询多个元素 返回list&lt;webElement&gt;</span><br><span class="line">driver.find_element(By.XPATH,&quot;//li[@class=&apos;gl-item&apos;]&quot;)</span><br><span class="line"></span><br><span class="line">#执行js代码，滚动条到页面最下端</span><br><span class="line">driver.execute_script(&quot;window.scrollTo(0, document.body.scrollHeight);&quot;)</span><br></pre></td></tr></table></figure></p>
-<p>webElement对象方法：<br>    size：返回元素尺寸<br>    text：返回元素文本<br>    get_attribute(name)：获得属性值<br>    is_dispalyed()：该元素是否用户可见</p>
+<p><strong>webElement对象</strong><br>|属性名|描述<br>|-| :-<br>|size|返回元素尺寸<br>|text|返回元素文本<br>|get_attribute(name)|获得属性值<br>|is_dispalyed()|该元素是否用户可见</p>
 
       
     </div>
