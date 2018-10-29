@@ -233,6 +233,129 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/29/scrapy/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liumu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lm's space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/29/scrapy/" itemprop="url">scrapy</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-29T21:23:18+08:00">
+                2018-10-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="scrapy的使用总结"><a href="#scrapy的使用总结" class="headerlink" title="scrapy的使用总结"></a>scrapy的使用总结</h1><p>1.安装：pip install Scrapy<br>2.创建项目：scrapy startproject 项目名<br>3.定义item.py<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import scrapy</span><br><span class="line">class LmscrapyItem(scrapy.Item):</span><br><span class="line">    # define the fields for your item here like:</span><br><span class="line">    # name = scrapy.Field()</span><br><span class="line">    phone = scrapy.Field()</span><br><span class="line">    amount = scrapy.Field()</span><br><span class="line">    createTime = scrapy.Field()</span><br><span class="line">    product = scrapy.Field()</span><br></pre></td></tr></table></figure></p>
+<p>4.创建spider<br>    name：spider的主键和其他spider不能重名<br>    start_urls：初始化爬取url列表<br>    parse：对返回内容处理，第一个参数为返回值（爬取的回调函数）<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import scrapy</span><br><span class="line"></span><br><span class="line">class XmSpider(scrapy.Spider):</span><br><span class="line">    name = &quot;xmjk&quot;</span><br><span class="line">    allowed_domains = [&quot;xiongmaojinku.com&quot;]</span><br><span class="line">    start_urls = [</span><br><span class="line">        &quot;https://www.xiongmaojinku.com/claim/v5/recent_invest&quot;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    def parse(self, response):</span><br><span class="line">        print(response)</span><br></pre></td></tr></table></figure></p>
+<p>5.爬取:scrapy crawl spider的name</p>
+<p>6.进入scrapy shell：scrapy shell “<a href="http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;" target="_blank" rel="noopener">http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;</a><br>默认返回请求url的response对象<br>返回json的处理方式：<code>json.load(response.text)</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/26/花里胡哨/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -897,7 +1020,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -910,7 +1033,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
