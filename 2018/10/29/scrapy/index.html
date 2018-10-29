@@ -5,8 +5,8 @@
 
 <html class="theme-next gemini" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-   <meta name="baidu-site-verification" content="tlVx4ZT67C">
-  <meta charset="UTF-8">
+  <meta name="baidu-site-verification" content="tlVx4ZT67C">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="lm&#39;s space">
 <meta property="og:description" content="scrapy的使用总结1.安装：pip install Scrapy2.创建项目：scrapy startproject 项目名3.定义item.py例如:12345678import scrapyclass LmscrapyItem(scrapy.Item):    # define the fields for your item here like:    # name = scrapy.F">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-29T09:44:02.398Z">
+<meta property="og:updated_time" content="2018-10-29T10:01:28.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scrapy">
 <meta name="twitter:description" content="scrapy的使用总结1.安装：pip install Scrapy2.创建项目：scrapy startproject 项目名3.定义item.py例如:12345678import scrapyclass LmscrapyItem(scrapy.Item):    # define the fields for your item here like:    # name = scrapy.F">
@@ -304,7 +304,7 @@
         <h1 id="scrapy的使用总结"><a href="#scrapy的使用总结" class="headerlink" title="scrapy的使用总结"></a>scrapy的使用总结</h1><p>1.安装：pip install Scrapy<br>2.创建项目：scrapy startproject 项目名<br>3.定义item.py<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import scrapy</span><br><span class="line">class LmscrapyItem(scrapy.Item):</span><br><span class="line">    # define the fields for your item here like:</span><br><span class="line">    # name = scrapy.Field()</span><br><span class="line">    phone = scrapy.Field()</span><br><span class="line">    amount = scrapy.Field()</span><br><span class="line">    createTime = scrapy.Field()</span><br><span class="line">    product = scrapy.Field()</span><br></pre></td></tr></table></figure></p>
 <p>4.创建spider<br>    name：spider的主键和其他spider不能重名<br>    start_urls：初始化爬取url列表<br>    parse：对返回内容处理，第一个参数为返回值（爬取的回调函数）<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import scrapy</span><br><span class="line"></span><br><span class="line">class XmSpider(scrapy.Spider):</span><br><span class="line">    name = &quot;xmjk&quot;</span><br><span class="line">    allowed_domains = [&quot;xiongmaojinku.com&quot;]</span><br><span class="line">    start_urls = [</span><br><span class="line">        &quot;https://www.xiongmaojinku.com/claim/v5/recent_invest&quot;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    def parse(self, response):</span><br><span class="line">        print(response)</span><br></pre></td></tr></table></figure></p>
 <p>5.爬取:scrapy crawl spider的name</p>
-<p>6.进入scrapy shell：scrapy shell “<a href="http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;" target="_blank" rel="noopener">http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;</a><br>默认返回请求url的response对象<br>返回json的处理方式：<code>json.load(response.text)</code></p>
+<p>6.进入scrapy shell：<code>scrapy shell &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;</code><br>默认返回请求url的response对象<br>返回json的处理方式：<code>json.load(response.text)</code></p>
 
       
     </div>
